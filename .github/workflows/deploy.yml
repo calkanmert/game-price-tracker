@@ -11,6 +11,5 @@ jobs:
       DOCKER_HUB_PASSWORD: ${{ secrets.DOCKER_HUB_PASSWORD }}
       DOCKER_HUB_REPO: ${{ secrets.DOCKER_HUB_REPO }}
     steps:
-      - run: ls
       - uses: actions/checkout@v2
       - run: bash ./infrastructure/ci.sh
