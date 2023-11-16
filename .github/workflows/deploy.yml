@@ -11,4 +11,4 @@ jobs:
       DOCKER_HUB_PASSWORD: ${{ secrets.DOCKER_HUB_PASSWORD }}
       DOCKER_HUB_REPO: ${{ secrets.DOCKER_HUB_REPO }}
     steps:
-      - run: bash infrastructure/ci
+      - run: bash ./infrastructure/ci
