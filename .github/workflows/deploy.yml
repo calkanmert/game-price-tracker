@@ -1,0 +1,14 @@
+name: deploy
+on:
+  push:
+    branches:
+      - master
+jobs:
+  deploy-to-docker-hub:
+    runs-on: ubuntu-latest
+    steps:
+      env:
+        DOCKER_HUB_USER: ${{ secrets.DOCKER_HUB_USER }}
+        DOCKER_HUB_PASSWORD: ${{ secrets.DOCKER_HUB_PASSWORD }}
+        DOCKER_HUB_REPO: ${{ secrets.DOCKER_HUB_REPO }}
+      - run: bash infrastructure/ci
